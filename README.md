@@ -1,6 +1,12 @@
 # Automata
 
-A cellular automata is a form of zero-player game, beginning with a board of cells in some configuration and then proceeding to generate future iterations of the board according to some pre-defined rules. Perhaps the most famous cellular automata is [Conway’s Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), in which cells on the board are considered either ’living’ or ’dead’, and swap between states based on their own state and how many cells in their immediate vicinity are alive. Other than the initial board creation, cellular automata do not require any input from a player to continue developing, hence the term ‘zero-player’ game.
+A cellular automata is a form of zero-player game,
+beginning with a board of cells in some configuration and then proceeding to generate future iterations of the board according to some pre-defined rules.
+Perhaps the most famous cellular automata is [Conway’s Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life),
+in which cells on the board are considered either ’living’ or ’dead’,
+and swap between states based on their own state and how many cells in their immediate vicinity are alive.
+Other than the initial board creation, cellular automata do not require any input from a player to continue developing,
+hence the term ‘zero-player’ game.
 
 ## Usage
 **`Usage: automata [options] ... [arg]\n`**
@@ -40,7 +46,8 @@ Rows will be separated by the forward slash '/'.\
 For instance, `101110`.\
 \
 Maximum size of the board is **10*10**, which means the biggest input would be\
-`XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX`
+`XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX/XXXXXXXXXX`\
+One line cells are permitted, but vertical wrapping is illegal, only horizontal wrapping is allowed.
 
 For instance,\
 `./automata 0101/0001/1100`\
@@ -49,6 +56,11 @@ would create a 3x4 board as follows:
 0101
 0001
 1100
+```
+`./automata 10101`\
+would create a 1x5 board as follows:
+```
+10101
 ```
 ---
 ### **Acknowledgements**
