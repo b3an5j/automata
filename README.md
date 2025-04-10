@@ -1,0 +1,2 @@
+# automata
+zero-player game
